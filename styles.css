@@ -1,0 +1,144 @@
+:root{
+    --main-color:#5c925c;
+    /* --main-color:#438d43; */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.title{
+    text-align: center;
+}
+
+.separate{
+    width: 100px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    margin:0 auto 2rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: min(100%,600px);
+    margin: 1rem auto;
+}
+
+.btn{
+    padding: .3em .5em;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    color: #438d43;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+    width: 90%;
+    margin: 4rem auto ;
+}
+
+.item{
+    display: flex;
+    width: min(90%,570px);
+}
+
+.item__img{
+    display: block;
+    width: 225px;
+    object-fit: cover;
+    height: 200px;
+    border: 4px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.item__info{
+    padding: 0 .5em;
+}
+
+.item__header{
+    display: flex;
+    border-bottom: 1px dashed var(--main-color);
+    line-height: 0;
+    padding-top: 10px;
+}
+
+.item__name{
+    letter-spacing: 2px;
+    margin-right:auto;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.item__price{
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+.item__text{
+    color: #0007;
+}
+
+.hide{
+    display: none;
+}
+
+
+@media (hover:hover){
+    .btn:hover{
+        background-color: var(--main-color);
+        color: #fff;
+    }
+}
+
+@media (min-width:500px) {
+    .btn{
+        font-size: 1.2rem;
+    } 
+    
+    .title{
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width:1290px){
+    .items{
+        flex-direction: column;
+        align-items: center;
+    }
+    .item__info{
+        margin-top: 1rem;
+    }
+    .item__header{
+        padding-top: 0px;
+    }
+
+}
+
+@media (max-width:730px){
+    .item{
+        flex-direction: column;
+    }
+    .item__img{
+        width: 100%;
+    }
+}
+
+@media (max-width:280px){
+    .btn{
+        font-size: .8rem;
+        padding: 3px;
+    } 
+}
